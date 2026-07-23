@@ -54,17 +54,17 @@ Host Computer:
 
 \-Verified LabSwitch in Hyper-V Virtual Switch Manager.
 
-\-Verified vEthernet (LabSwitch) adapter using Powershell command Get-NetAdapter. 
+\-Verified vEthernet (LabSwitch) adapter using Powershell command Get-NetAdapter.
 
 
 
-\## Screenshots/Images
+\## Evidence
 
-\-Located in Hyper-V
 
-\-image/ 01-hyperv-manager.png
 
-\-image/ 02-labswitch-configuration.png
+\-screenshot/ 01-hyperv-manager.png
 
-\-image/ 03-get-netadapter.png
+\-screenshot/ 02-labswitch-configuration.png
+
+\-screenshot/ 03-get-netadapter.png
 
