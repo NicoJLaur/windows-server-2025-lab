@@ -1,34 +1,30 @@
-\# Configure Lab Networking
+# Configure Lab Networking
 
 
 
-\## Objective
+## Objective
 
 
 
-Configure an isolated Hyper-V virtual network that allows virtual machines to communicate with one another and access the internet through the Hyper-V host while remaining separated from the physical home network. 
+Configure the networking infrastructure required to support communication between the Hyper-V host and all virtual machines while providing controlled internet access through Network Address Translation (NAT).
+
+
+## Environment
 
 
 
-\## Environment
+| Component | Configuration |
+|-----------|---------------|
+| Host OS | Windows 11 Pro |
+| Hypervisor | Hyper-V |
+| Virtual Switch | LabSwitch (Internal) |
+| Host Adapter | vEthernet (LabSwitch) |
+| NAT Network | LabNAT |
+| Lab Network | 192.168.50.0/24 |
 
 
 
-Host OS: Windows 11 Pro
-
-Hypervisor: Hyper-V
-
-Virtual Switch: LabSwitch(Internal)
-
-Host Adapter: vEthernet(LabSwitch)
-
-NAT Name: LabNAT
-
-Lab Network: 192.168.50.0/24
-
-
-
-\## Network Design
+## Network Design
 
 
 
@@ -40,7 +36,7 @@ Benefits: Isolation from the physical network, safe environment for testing AD, 
 
 
 
-\## Validation
+## Validation
 
 
 
@@ -48,21 +44,31 @@ The following items were verified:
 
 
 
-\- Hyper-V Internal Virtual Switch (LabSwitch) created successfully.
-
-\- Host virtual adapter configured with 192.168.50.1/24.
-
-\- Windows NAT (LabNAT) configured successfully.
-
-\- DC01 configured with a static IP address on the lab subnet.
-
-\- ICMP connectivity to public IP addresses verified.
-
-\- Traceroute confirmed outbound traffic was routed through the Hyper-V NAT gateway.
+- [x] Hyper-V Internal Virtual Switch ('LabSwitch') created successfully.
 
 
 
-\### Outstanding Validation
+<img width="676" height="477" alt="03-Host-LabSwitch-IP" src="https://github.com/user-attachments/assets/b4cf1c16-442a-4c93-9b02-448b71bfa7bd" />
+
+<img width="374" height="152" alt="02-DC01-LabSwitchConnection" src="https://github.com/user-attachments/assets/a04b691b-ddbf-48d4-bead-a73a96de0ef0" />
+
+- [x] Host virtual adapter configured with 192.168.50.1/24.
+
+- [x] Windows NAT (LabNAT) created successfully.
+<img width="842" height="502" alt="04-LabNAT" src="https://github.com/user-attachments/assets/98947b50-2a35-4e32-9c55-a650bb76a50f" />
+
+
+
+- [x] Outbound ICMP connectivity verified.
+
+- [x] Traceroute confirmed outbound traffic was routed through the Hyper-V NAT gateway.
+
+
+<img width="956" height="474" alt="05-Traceroute-Internet" src="https://github.com/user-attachments/assets/87ef50d6-1925-4b95-ba6e-75150aa7a328" />
+
+
+
+### Outstanding Validation
 
 
 
@@ -70,7 +76,7 @@ DNS resolution and Windows Update testing will be completed from a non-corporate
 
 
 
-\## Learned
+## Learned
 
 
 
@@ -84,31 +90,6 @@ This configuration also highlighted the value of validating each layer of networ
 
 \*Note\* Final DNS and Windows Update validation will be completed on a non-corporate network to avoid issues.
 
-
-
-\## Evidence
-
-
-
-\-screenshot/ 01-HyperV-VirtualSwitchManager.png
-
-\-screenshot/ 02-DC01-LabSwitchConnection.png
-
-\-screenshot/ 03-Host-LabSwitch.png
-
-\-screenshot/ 04-LabNAT.png
-
-\-screenshot/ 05-Traceroute-Iternet.png
-
-
-
-
-
-
-
-
-
-&#x20;
 
 
 
