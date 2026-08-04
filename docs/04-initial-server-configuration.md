@@ -34,7 +34,7 @@ Prepare Windows Server 2025 for its future role as the first Active Directory Do
 A domain controller should always use a static IP address to ensure clients can consistently locate Active Directory and Domain services.
 
 ### Preferred DNS
-This will be a temporary decision to prepare the server into becoming the domain controller. The preferred DNS server was configured as the server's own IP address because the server will host Active Directory integrated DNS service after promotion.
+Although the DNS Server role has not yet been installed, the preferred DNS server was configured to use the server's own IP address in preparation for Active Directory deployment. After domain promotion, DC01 will host the Active Directory-integrated DNS zone and become authoritative for internal name resolution.
 
 
 ## Validation
@@ -50,7 +50,7 @@ The following initial configuration task were completed:
 
 
 - [x] Configured a static IPv4 address
-- [x] Configured DNS server
+- [x] Configured the preferred DNS server address
 
 
 <img width="959" height="500" alt="03-StaticIP-Config" src="https://github.com/user-attachments/assets/312bc9fb-a2af-4af8-a18f-8120361c7971" />
@@ -67,7 +67,7 @@ The following initial configuration task were completed:
 ## Learned
 
 
-Configuring a static IP address before installing Active Directory helps ensure consistent network communication.
+Initial server configuration establishes the foundation for every role installed afterward. Assigning a permanent hostname and static network configuration before promoting the server to a domain controller avoids unnecessary reconfiguration and helps ensure consistent DNS registration and Active Directory communication.
 
 
 
