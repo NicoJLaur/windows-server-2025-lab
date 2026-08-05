@@ -1,8 +1,10 @@
-\# Hyper-V Host setup
+# **Hyper-V Host Setup**
 
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
+##### 
 
-\## Objective
+##### **Objective**
 
 
 
@@ -10,29 +12,35 @@ Prepare my Windows host machine for virtualization by installing Hyper-V and cre
 
 
 
-\## Environment/Specs
+##### **Environment**
 
 
 
-Host Computer:
-
-\-Dell Latitude 5450
-
-\-Windows 11 Pro
-
-\-Intel(R) Core(TM) Ultra 5 125U
-
-\-16GB RAM
-
-\-500GB SSD
 
 
+|Component| Value|
 
-\## Configuration
+|Host| Dell Latitude 5450|
+
+|Name| LABHOST|
+
+|OS| Windows 11 Pro|
+
+|CPU| Intel(R) Core(TM) Ultra 5 125U|
+
+|RAM| 16GB|
+
+|Storage| 477GB SSD|
+
+|Hypervisor| Hyper-V|
 
 
 
-\### Hyper-V
+##### **Configuration**
+
+
+
+Hyper-V
 
 \-Installed Hyper-V Platform
 
@@ -40,7 +48,7 @@ Host Computer:
 
 
 
-\### Virtual Switch
+Virtual Switch
 
 \-Name: LabSwitch
 
@@ -50,7 +58,9 @@ Host Computer:
 
 
 
-\## Validation
+##### **Validation**
+
+
 
 \-Verified LabSwitch in Hyper-V Virtual Switch Manager.
 
@@ -58,7 +68,7 @@ Host Computer:
 
 
 
-\## Evidence
+
 
 
 
