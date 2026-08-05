@@ -1,69 +1,73 @@
-\# Initial Server Configuration
+# Initial Server Configuration
 
 
 
-\## Objective
+## Objective
 
 
 
-Prepare Windows Server 2025 for deployment as the first Domain Controller by configuring its identity and network settings.
+Prepare Windows Server 2025 for its future role as the first Active Directory Domain Controller by configuring the server identity and assigning a static network configuration. 
 
 
 
-\## Configuration
+## Server Configuration
 
 
 
-Server: DC01 (Renamed)
+| Setting | Value |
+|---------|-------|
+| Computer Name | DC01 |
+| Operating System | Windows Server 2025 Standard Evaluation |
+| Role | Future Domain Controller |
 
-OS: Windows Server 2025
+## Network Configuration
 
-IPv4 Address: 192.168.50.10 (Set static IP to ensure future reliable DNS and authentication services.)
+| Setting | Value |
+|---------|-------|
+| IPv4 Address | 192.168.50.10 |
+| Subnet Mask | 255.255.255.0 |
+| Default Gateway | 192.168.50.1 *(or None if that's what you actually configured at this stage)* |
+| Preferred DNS | 192.168.50.10 |
 
-Subnet Mask: 255.255.255.0
+## Design Decisions
+### Static IP Address
+A domain controller should always use a static IP address to ensure clients can consistently locate Active Directory and Domain services.
 
-Default Gateway: None
-
-Preferred DNS: 192.168.50.10 (Configured to use itself because it will host the DNS service after Active Directory is installed.)
-
-
-
-\## Validation
-
-
-
-\-Server renamed successfully
-
-\-Static IP address applied successfully
-
-\-Server restarted to apply IP and name
-
-\-Network and name verified on Server Manager < Local Server
+### Preferred DNS
+Although the DNS Server role has not yet been installed, the preferred DNS server was configured to use the server's own IP address in preparation for Active Directory deployment. After domain promotion, DC01 will host the Active Directory-integrated DNS zone and become authoritative for internal name resolution.
 
 
+## Validation
 
-\## Learned
-
-
-
-Configuring a static IP address before installing Active Directory helps ensure consistent network communication.
+The following initial configuration task were completed:
 
 
+- [x] Renamed the server to 'DC01'
 
-\## Evidence
+
+<img width="959" height="504" alt="02-RenameServer" src="https://github.com/user-attachments/assets/a598a177-7058-45f9-95a5-4e7d1c7303d4" />
 
 
 
-\-screenshot/ 01-LocalServer-Before.png
+- [x] Configured a static IPv4 address
+- [x] Configured the preferred DNS server address
 
-\-screenshot/ 02-RenameServer.png
 
-\-screenshot/ 03-StaticIP-Config.png
-
-\-screenshot/ 04-LocalServer-After.png
+<img width="959" height="500" alt="03-StaticIP-Config" src="https://github.com/user-attachments/assets/312bc9fb-a2af-4af8-a18f-8120361c7971" />
 
 
 
+- [x] Confirmed the new hostname and network configuration
+
+
+<img width="957" height="502" alt="04-LocalServer-After" src="https://github.com/user-attachments/assets/b391f7b8-12d0-4b24-a1b3-5da97baa3b93" />
+
+
+
+## Learned
+
+
+Initial server configuration establishes the foundation for every role installed afterward. Assigning a permanent hostname and static network configuration before promoting the server to a domain controller avoids unnecessary reconfiguration and helps ensure consistent DNS registration and Active Directory communication.
 
 
 
