@@ -64,7 +64,8 @@ The following items were verified:
 - [x] Traceroute confirmed outbound traffic was routed through the Hyper-V NAT gateway.
 
 
-<img width="956" height="474" alt="05-Traceroute-Internet" src="https://github.com/user-attachments/assets/87ef50d6-1925-4b95-ba6e-75150aa7a328" />
+<img width="956" height="412" alt="05-Traceroute-Internet" src="https://github.com/user-attachments/assets/18f43dda-6726-41eb-a2fa-657da3426251" />
+
 
 
 
