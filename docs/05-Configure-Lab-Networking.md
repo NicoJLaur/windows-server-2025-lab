@@ -27,6 +27,10 @@ Configure the networking infrastructure required to support communication betwee
 ## Network Design
 
 
+<img width="332" height="669" alt="Networkdiagramsofar" src="https://github.com/user-attachments/assets/423bf116-2b59-4608-a967-e796a3800588" />
+
+
+
 
 Instead of bridging the virtual machines directly to the home network, an Internal Hyper-V Switch was created. This allows all lab machines to communicate on a private network while the Windows host performs Network Address Translation (NAT) for internet access.
 
