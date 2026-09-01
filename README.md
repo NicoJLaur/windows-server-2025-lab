@@ -98,8 +98,10 @@ The environment is built entirely in **Hyper-V** using an isolated virtual netwo
 | ✅ | 08 - Deploy Windows Client & Join Domain |
 | ✅ | 09 - Group Policy Management |
 | ✅ | 10 - Password & Account Policies |
-| ⏳ | Drive Mapping |
-| ⏳ | Folder Redirection |
+| ✅ | 11 - Configure Shared Resources and NTFS Permissions |
+| ✅ | 12 - Drive Mapping |
+| ✅ | 13 - Folder Redirection |
+| ⏳ | Windows Server Backup |
 | ⏳ | Desktop Restrictions |
 | ⏳ | File Server |
 | ⏳ | DHCP |
@@ -122,6 +124,9 @@ The environment is built entirely in **Hyper-V** using an isolated virtual netwo
 | [08 - Windows Client Deployment](docs/08-Windows-Client-Deployment.md) | Deploy Windows 11 and join it to the domain |
 | [09 - Group Policy Management](docs/09-Group-Policy.md) | Deploy and validate Group Policy Objects |
 | [10 - Password & Account Policies](docs/10-Password-Account-Policy.md) | Configure centralized password and lockout policies |
+| [11 - Shared Resource and NTFS Permissions](docs/11-Configure-Shared-Resources-and-NTFS-Permissions.md) | Secure centralized network file shares |
+| [12 - Configure Drive Mapping](docs/12-Configure-Drive-Mapping.md) | Map shared network drives for domain users based on their role
+| [13 - Configure Folder Redirection](docs/13-Configure-Folder-Redirection.md) | Folder Redirection to centrally store a domain user's documents onto domain controller |
 
 ---
 
