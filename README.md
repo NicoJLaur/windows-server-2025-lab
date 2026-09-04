@@ -65,7 +65,7 @@ validation, troubleshooting, and lessons learned.
 | 10 | [Password & Account Policies](docs/10-Password-Account-Policy.md) | Configured domain-wide password and account lockout policies. |
 | 11 | [Shared Resources & NTFS Permissions](docs/11-Configure-Shared-Resources-and-NTFS-Permissions.md) | Built SMB shares and implemented group-based NTFS access control. |
 | 12 | [Drive Mapping with Group Policy](docs/12-Configure-Drive-Mapping.md) | Used Group Policy Preferences and Item-Level Targeting for role-based mapped drives. |
-| 13 | [Folder Redirection](docs/13-Configure-Folder-Redirection(1).md) | Redirected user Documents to server storage and troubleshot NTFS ACL/ownership issues. |
+| 13 | [Folder Redirection](docs/13-Configure-Folder-Redirection.md) | Redirected user Documents to server storage and troubleshot NTFS ACL/ownership issues. |
 | 14 | [Windows Server Backup & File Recovery](docs/14-Windows-Server-Backup-and-File-Recovery.md) | Backed up `DC01` and System State, verified with `wbadmin`, and performed a file recovery. |
 | 15 | [Software Deployment with Group Policy](docs/15-Software-Deployment-GroupPolicy.md) | Automatically deployed 7-Zip to `CLIENT01` using Group Policy Software Installation. |
 | 16 | [AD User Provisioning with PowerShell](docs/16-AD-User-Provisioning-with-Powershell.md) | Automated CSV-based account creation, OU placement, group assignment, and duplicate detection. |
